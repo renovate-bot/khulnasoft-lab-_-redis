@@ -4125,7 +4125,7 @@ void processEventsWhileBlocked(void) {
     /* Note: when we are processing events while blocked (for instance during
      * busy Lua scripts), we set a global flag. When such flag is set, we
      * avoid handling the read part of clients using threaded I/O.
-     * See https://github.com/redis/redis/issues/6988 for more info.
+     * See https://github.com/khulnasoft-lab/redis/issues/6988 for more info.
      * Note that there could be cases of nested calls to this function,
      * specifically on a busy script during async_loading rdb, and scripts
      * that came from AOF. */

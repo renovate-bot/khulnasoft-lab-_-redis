@@ -8,7 +8,7 @@
 # Default-Start:        2 3 4 5
 # Default-Stop:         0 1 6
 # Short-Description:    Redis data structure server
-# Description:          Redis data structure server. See https://redis.io
+# Description:          Redis data structure server. See https://khulnasoft.com
 ### END INIT INFO
 
 REDISPORT=6379

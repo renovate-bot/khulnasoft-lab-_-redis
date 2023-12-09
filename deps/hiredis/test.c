@@ -2219,7 +2219,7 @@ static void test_async_polling(struct config config) {
     test_cond(astest.pongs == 1);
 
     /* Test a ping/pong after connection that didn't time out.
-     * see https://github.com/redis/hiredis/issues/945
+     * see https://github.com/khulnasoft-lab/hiredis/issues/945
      */
     if (config.type == CONN_TCP || config.type == CONN_SSL) {
         test("Async PING/PONG after connect timeout: ");
@@ -2238,7 +2238,7 @@ static void test_async_polling(struct config config) {
     }
 
     /* Test disconnect from an on_connect callback
-     * see https://github.com/redis/hiredis/issues/931
+     * see https://github.com/khulnasoft-lab/hiredis/issues/931
      */
     test("Disconnect from onConnected callback (Issue #931): ");
     c = do_aconnect(config, ASTEST_ISSUE_931);
@@ -2249,7 +2249,7 @@ static void test_async_polling(struct config config) {
     test_cond(astest.disconnects == 1);
 
     /* Test ping/pong from an on_connect callback
-     * see https://github.com/redis/hiredis/issues/931
+     * see https://github.com/khulnasoft-lab/hiredis/issues/931
      */
     test("Ping/Pong from onConnected callback (Issue #931): ");
     c = do_aconnect(config, ASTEST_ISSUE_931_PING);

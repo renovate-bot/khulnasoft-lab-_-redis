@@ -22,7 +22,7 @@ There is also an active community of Redis users at Stack Overflow:
 
 Issues and pull requests for documentation belong on the redis-doc repo:
 
-    https://github.com/redis/redis-doc
+    https://github.com/khulnasoft-lab/redis-doc
 
 If you are reporting a security bug or vulnerability, see SECURITY.md.
 

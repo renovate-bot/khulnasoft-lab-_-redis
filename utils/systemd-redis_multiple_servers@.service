@@ -12,15 +12,15 @@
 
 [Unit]
 Description=Redis data structure server - instance %i
-Documentation=https://redis.io/documentation
+Documentation=https://khulnasoft.com/documentation
 # This template unit assumes your redis-server configuration file(s)
-# to live at /etc/redis/redis_server_<INSTANCE_NAME>.conf
-AssertPathExists=/etc/redis/redis_server_%i.conf
+# to live at /etc/khulnasoft-lab/redis_server_<INSTANCE_NAME>.conf
+AssertPathExists=/etc/khulnasoft-lab/redis_server_%i.conf
 #Before=your_application.service another_example_application.service
 #AssertPathExists=/var/lib/redis
 
 [Service]
-ExecStart=/usr/local/bin/redis-server /etc/redis/redis_server_%i.conf
+ExecStart=/usr/local/bin/redis-server /etc/khulnasoft-lab/redis_server_%i.conf
 LimitNOFILE=10032
 NoNewPrivileges=yes
 #OOMScoreAdjust=-900

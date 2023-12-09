@@ -1,4 +1,4 @@
-This README is just a fast *quick start* document. You can find more detailed documentation at [redis.io](https://redis.io).
+This README is just a fast *quick start* document. You can find more detailed documentation at [khulnasoft.com](https://khulnasoft.com).
 
 What is Redis?
 --------------
@@ -15,10 +15,10 @@ Another good example is to think of Redis as a more complex version of memcached
 
 If you want to know more, this is a list of selected starting points:
 
-* Introduction to Redis data types. https://redis.io/topics/data-types-intro
-* Try Redis directly inside your browser. https://try.redis.io
-* The full list of Redis commands. https://redis.io/commands
-* There is much more inside the official Redis documentation. https://redis.io/documentation
+* Introduction to Redis data types. https://khulnasoft.com/topics/data-types-intro
+* Try Redis directly inside your browser. https://try.khulnasoft.com
+* The full list of Redis commands. https://khulnasoft.com/commands
+* There is much more inside the official Redis documentation. https://khulnasoft.com/documentation
 
 Building Redis
 --------------
@@ -184,7 +184,7 @@ then in another terminal try the following:
     (integer) 2
     redis>
 
-You can find the list of all the available commands at https://redis.io/commands.
+You can find the list of all the available commands at https://khulnasoft.com/commands.
 
 Installing Redis
 -----------------
@@ -226,9 +226,9 @@ source distribution.
 Please see the [CONTRIBUTING.md][2] file in this source distribution for more
 information. For security bugs and vulnerabilities, please see [SECURITY.md][3].
 
-[1]: https://github.com/redis/redis/blob/unstable/COPYING
-[2]: https://github.com/redis/redis/blob/unstable/CONTRIBUTING.md
-[3]: https://github.com/redis/redis/blob/unstable/SECURITY.md
+[1]: https://github.com/khulnasoft-lab/redis/blob/unstable/COPYING
+[2]: https://github.com/khulnasoft-lab/redis/blob/unstable/CONTRIBUTING.md
+[3]: https://github.com/khulnasoft-lab/redis/blob/unstable/SECURITY.md
 
 Redis internals
 ===
@@ -258,7 +258,7 @@ Inside the root are the following important directories:
 
 * `src`: contains the Redis implementation, written in C.
 * `tests`: contains the unit tests, implemented in Tcl.
-* `deps`: contains libraries Redis uses. Everything needed to compile Redis is inside this directory; your system just needs to provide `libc`, a POSIX compatible interface and a C compiler. Notably `deps` contains a copy of `jemalloc`, which is the default allocator of Redis under Linux. Note that under `deps` there are also things which started with the Redis project, but for which the main repository is not `redis/redis`.
+* `deps`: contains libraries Redis uses. Everything needed to compile Redis is inside this directory; your system just needs to provide `libc`, a POSIX compatible interface and a C compiler. Notably `deps` contains a copy of `jemalloc`, which is the default allocator of Redis under Linux. Note that under `deps` there are also things which started with the Redis project, but for which the main repository is not `khulnasoft-lab/redis`.
 
 There are a few more directories but they are not very important for our goals
 here. We'll focus mostly on `src`, where the Redis implementation is contained,
@@ -474,7 +474,7 @@ Other C files
 * `dict.c` is an implementation of a non-blocking hash table which rehashes incrementally.
 * `cluster.c` implements the Redis Cluster. Probably a good read only after being very familiar with the rest of the Redis code base. If you want to read `cluster.c` make sure to read the [Redis Cluster specification][4].
 
-[4]: https://redis.io/topics/cluster-spec
+[4]: https://khulnasoft.com/topics/cluster-spec
 
 Anatomy of a Redis command
 ---
@@ -490,7 +490,7 @@ void foobarCommand(client *c) {
 
 The command function is referenced by a JSON file, together with its metadata, see `commands.c` described above for details.
 The command flags are documented in the comment above the `struct redisCommand` in `server.h`.
-For other details, please refer to the `COMMAND` command. https://redis.io/commands/command/
+For other details, please refer to the `COMMAND` command. https://khulnasoft.com/commands/command/
 
 After the command operates in some way, it returns a reply to the client,
 usually using `addReply()` or a similar function defined inside `networking.c`.

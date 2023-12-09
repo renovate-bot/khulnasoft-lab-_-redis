@@ -8,7 +8,7 @@ fi
 
 TAG=$1
 TARNAME="redis-${TAG}.tar.gz"
-DOWNLOADURL="http://download.redis.io/releases/${TARNAME}"
+DOWNLOADURL="http://download.khulnasoft.com/releases/${TARNAME}"
 
 echo "Doing sanity test on the actual tarball"
 

@@ -1,11 +1,11 @@
 
-[![Build Status](https://github.com/redis/hiredis/actions/workflows/build.yml/badge.svg)](https://github.com/redis/hiredis/actions/workflows/build.yml)
+[![Build Status](https://github.com/khulnasoft-lab/hiredis/actions/workflows/build.yml/badge.svg)](https://github.com/khulnasoft-lab/hiredis/actions/workflows/build.yml)
 
-**This Readme reflects the latest changed in the master branch. See [v1.0.0](https://github.com/redis/hiredis/tree/v1.0.0) for the Readme and documentation for the latest release ([API/ABI history](https://abi-laboratory.pro/?view=timeline&l=hiredis)).**
+**This Readme reflects the latest changed in the master branch. See [v1.0.0](https://github.com/khulnasoft-lab/hiredis/tree/v1.0.0) for the Readme and documentation for the latest release ([API/ABI history](https://abi-laboratory.pro/?view=timeline&l=hiredis)).**
 
 # HIREDIS
 
-Hiredis is a minimalistic C client library for the [Redis](https://redis.io/) database.
+Hiredis is a minimalistic C client library for the [Redis](https://khulnasoft.com/) database.
 
 It is minimalistic because it just adds minimal support for the protocol, but
 at the same time it uses a high level printf-alike API in order to make it
@@ -34,7 +34,7 @@ Almost all users will simply need to recompile their applications against the ne
 
 <span style="color:red">NOTE:  v1.0.1 erroneously bumped SONAME, which is why it is skipped here.</span>
 
-Version 1.0.2 is simply 1.0.0 with a fix for [CVE-2021-32765](https://github.com/redis/hiredis/security/advisories/GHSA-hfm9-39pp-55p2).  They are otherwise identical.
+Version 1.0.2 is simply 1.0.0 with a fix for [CVE-2021-32765](https://github.com/khulnasoft-lab/hiredis/security/advisories/GHSA-hfm9-39pp-55p2).  They are otherwise identical.
 
 ## Upgrading to `1.0.0`
 
@@ -787,7 +787,7 @@ If you have a unique use-case where you don't want hiredis to automatically inte
 
 ## Allocator injection
 
-Hiredis uses a pass-thru structure of function pointers defined in [alloc.h](https://github.com/redis/hiredis/blob/f5d25850/alloc.h#L41) that contain the currently configured allocation and deallocation functions.  By default they just point to libc (`malloc`, `calloc`, `realloc`, etc).
+Hiredis uses a pass-thru structure of function pointers defined in [alloc.h](https://github.com/khulnasoft-lab/hiredis/blob/f5d25850/alloc.h#L41) that contain the currently configured allocation and deallocation functions.  By default they just point to libc (`malloc`, `calloc`, `realloc`, etc).
 
 ### Overriding
 

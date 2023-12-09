@@ -988,7 +988,7 @@ int moduleGetCommandChannelsViaAPI(struct redisCommand *cmd, robj **argv, int ar
  *
  * These functions are used to implement custom Redis commands.
  *
- * For examples, see https://redis.io/topics/modules-intro.
+ * For examples, see https://khulnasoft.com/topics/modules-intro.
  * -------------------------------------------------------------------------- */
 
 /* Return non-zero if a module command, that was declared with the
@@ -1202,7 +1202,7 @@ RedisModuleCommand *moduleCreateCommandProxy(struct RedisModule *module, sds dec
  *                    from the same input arguments and key values.
  *                    Starting from Redis 7.0 this flag has been deprecated.
  *                    Declaring a command as "random" can be done using
- *                    command tips, see https://redis.io/topics/command-tips.
+ *                    command tips, see https://khulnasoft.com/topics/command-tips.
  * * **"allow-stale"**: The command is allowed to run on slaves that don't
  *                      serve stale data. Don't use if you don't know what
  *                      this means.
@@ -1236,7 +1236,7 @@ RedisModuleCommand *moduleCreateCommandProxy(struct RedisModule *module, sds dec
  *                          the arguments that are channels.
  *
  * The last three parameters specify which arguments of the new command are
- * Redis keys. See https://redis.io/commands/command for more information.
+ * Redis keys. See https://khulnasoft.com/commands/command for more information.
  *
  * * `firstkey`: One-based index of the first argument that's a key.
  *               Position 0 is always the command name itself.
@@ -1592,7 +1592,7 @@ int RM_SetCommandACLCategories(RedisModuleCommand *command, const char *aclflags
  *     both strings set to NULL.
  *
  * - `tips`: A string of space-separated tips regarding this command, meant for
- *   clients and proxies. See https://redis.io/topics/command-tips.
+ *   clients and proxies. See https://khulnasoft.com/topics/command-tips.
  *
  * - `arity`: Number of arguments, including the command name itself. A positive
  *   number specifies an exact number of arguments and a negative number
@@ -5372,7 +5372,7 @@ int RM_HashGet(RedisModuleKey *key, int flags, ...) {
 /* --------------------------------------------------------------------------
  * ## Key API for Stream type
  *
- * For an introduction to streams, see https://redis.io/topics/streams-intro.
+ * For an introduction to streams, see https://khulnasoft.com/topics/streams-intro.
  *
  * The type RedisModuleStreamID, which is used in stream functions, is a struct
  * with two 64-bit fields and is defined as
@@ -6245,7 +6245,7 @@ fmterr:
  *        // Do something with myval.
  *      }
  *
- * This API is documented here: https://redis.io/topics/modules-intro
+ * This API is documented here: https://khulnasoft.com/topics/modules-intro
  */
 RedisModuleCallReply *RM_Call(RedisModuleCtx *ctx, const char *cmdname, const char *fmt, ...) {
     client *c = NULL;
@@ -6754,7 +6754,7 @@ robj *moduleTypeDupOrReply(client *c, robj *fromkey, robj *tokey, int todb, robj
 
 /* Register a new data type exported by the module. The parameters are the
  * following. Please for in depth documentation check the modules API
- * documentation, especially https://redis.io/topics/modules-native-types.
+ * documentation, especially https://khulnasoft.com/topics/modules-native-types.
  *
  * * **name**: A 9 characters data type name that MUST be unique in the Redis
  *   Modules ecosystem. Be creative... and there will be no collisions. Use
@@ -7643,7 +7643,7 @@ void RM_LatencyAddSample(const char *event, mstime_t latency) {
  * ## Blocking clients from modules
  *
  * For a guide about blocking commands in modules, see
- * https://redis.io/topics/modules-blocking-ops.
+ * https://khulnasoft.com/topics/modules-blocking-ops.
  * -------------------------------------------------------------------------- */
 
 /* This is called from blocked.c in order to unblock a client: may be called
@@ -8633,7 +8633,7 @@ void moduleReleaseGIL(void) {
  * runs is dangerous and discouraged. In order to react to key space events with
  * write actions, please refer to `RM_AddPostNotificationJob`.
  *
- * See https://redis.io/topics/notifications for more information.
+ * See https://khulnasoft.com/topics/notifications for more information.
  */
 int RM_SubscribeToKeyspaceEvents(RedisModuleCtx *ctx, int types, RedisModuleNotificationFunc callback) {
     RedisModuleKeyspaceSubscriber *sub = zmalloc(sizeof(*sub));
@@ -9720,7 +9720,7 @@ int moduleGetACLLogEntryReason(RedisModuleACLLogEntryReason reason) {
 /* Adds a new entry in the ACL log.
  * Returns REDISMODULE_OK on success and REDISMODULE_ERR on error.
  *
- * For more information about ACL log, please refer to https://redis.io/commands/acl-log */
+ * For more information about ACL log, please refer to https://khulnasoft.com/commands/acl-log */
 int RM_ACLAddLogEntry(RedisModuleCtx *ctx, RedisModuleUser *user, RedisModuleString *object, RedisModuleACLLogEntryReason reason) {
     int acl_reason = moduleGetACLLogEntryReason(reason);
     if (!acl_reason) return REDISMODULE_ERR;
@@ -9731,7 +9731,7 @@ int RM_ACLAddLogEntry(RedisModuleCtx *ctx, RedisModuleUser *user, RedisModuleStr
 /* Adds a new entry in the ACL log with the `username` RedisModuleString provided.
  * Returns REDISMODULE_OK on success and REDISMODULE_ERR on error.
  *
- * For more information about ACL log, please refer to https://redis.io/commands/acl-log */
+ * For more information about ACL log, please refer to https://khulnasoft.com/commands/acl-log */
 int RM_ACLAddLogEntryByUserName(RedisModuleCtx *ctx, RedisModuleString *username, RedisModuleString *object, RedisModuleACLLogEntryReason reason) {
     int acl_reason = moduleGetACLLogEntryReason(reason);
     if (!acl_reason) return REDISMODULE_ERR;

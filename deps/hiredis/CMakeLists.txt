@@ -86,7 +86,7 @@ version >= 1.2.0.
 
 The library comes with multiple APIs. There is the synchronous API, the asynchronous API \
 and the reply parsing API.")
-set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/redis/hiredis")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/khulnasoft-lab/hiredis")
 set(CPACK_PACKAGE_CONTACT "michael dot grunder at gmail dot com")
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 set(CPACK_RPM_PACKAGE_AUTOREQPROV ON)
