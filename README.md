@@ -1,3 +1,7 @@
+<a href="https://scan.coverity.com/projects/khulnasoft-lab-redis">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/29504/badge.svg"/>
+</a>
 This README is just a fast *quick start* document. You can find more detailed documentation at [khulnasoft.com](https://khulnasoft.com).
 
 What is Redis?
