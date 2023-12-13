@@ -660,7 +660,7 @@ jobs:
     if: |
       (github.event_name == 'workflow_dispatch' || (github.event_name != 'workflow_dispatch' && github.repository == 'khulnasoft-lab/redis')) &&
       !contains(github.event.inputs.skipjobs, 'centos')
-    container: centos:7
+    container: centos:8
     timeout-minutes: 14400
     steps:
     - name: prep
@@ -700,7 +700,7 @@ jobs:
     if: |
       (github.event_name == 'workflow_dispatch' || (github.event_name != 'workflow_dispatch' && github.repository == 'khulnasoft-lab/redis')) &&
       !contains(github.event.inputs.skipjobs, 'tls')
-    container: centos:7
+    container: centos:8
     timeout-minutes: 14400
     steps:
     - name: prep
@@ -747,7 +747,7 @@ jobs:
     if: |
       (github.event_name == 'workflow_dispatch' || (github.event_name != 'workflow_dispatch' && github.repository == 'khulnasoft-lab/redis')) &&
       !contains(github.event.inputs.skipjobs, 'tls')
-    container: centos:7
+    container: centos:8
     timeout-minutes: 14400
     steps:
     - name: prep
