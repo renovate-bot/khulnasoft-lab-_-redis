@@ -41,7 +41,7 @@ jobs:
 
   build-debian-old:
     runs-on: ubuntu-latest
-    container: debian:buster
+    container: debian:bookworm
     steps:
     - uses: actions/checkout@v3
     - name: make
