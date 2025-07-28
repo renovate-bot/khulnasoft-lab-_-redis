@@ -76,7 +76,7 @@ jobs:
     if: |
       (github.event_name == 'workflow_dispatch' || (github.event_name != 'workflow_dispatch' && github.repository == 'khulnasoft-lab/redis')) &&
       !contains(github.event.inputs.skipjobs, 'fortify')
-    container: ubuntu:lunar
+    container: ubuntu:lunar-20231128
     timeout-minutes: 14400
     steps:
     - name: prep
